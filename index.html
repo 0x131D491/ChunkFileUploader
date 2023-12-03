@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload JavaScript with Progress Ba | CodingNepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>File Chunk Uploader</header>
+      <form action="#">
+        <input id="file-input" class="file-input" type="file" name="file" multiple hidden />
+        <i class="fas fa-cloud-upload-alt"></i>
+        <p>Browse File to Upload</p>
+      </form>
+      <div id="file-info" style="display: none">
+        <div class="filename-area">
+          <p id="display-filename" class="filename"></p>
+          <div class="icon-button-group">
+            <div class="icon-button tooltip" onclick="editfile()">
+              <i class="fas fa-pen"></i>
+              <span class="tooltiptext">Change File</span>
+            </div>
+            <div id="uploadBtn" class="icon-button tooltip" onclick="uploadFile()">
+              <i class="fas fa-upload"></i>
+              <span class="tooltiptext">Upload</span>
+            </div>
+            <div id="resumeBtn" class="icon-button tooltip" style="display: none;" onclick="resume()">
+              <i class="fas fa-play"></i>
+              <span class="tooltiptext">Resume</span>
+            </div>
+            <!-- <div class="icon-button tooltip" onclick="uploadFile()">
+              <i class="fas fa-pause"></i>
+              <span class="tooltiptext">Pause</span>
+            </div> -->
+            <div id="cancelBtn" class="icon-button tooltip" style="display: none;" onclick="cancel()">
+              <i class="fas fa-ban"></i>
+              <span class="tooltiptext">Cancel</span>
+            </div>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <span
+            id="progress-bar"
+            class="progress-bar-fill"
+            style="width: 0%"
+          ></span>
+        </div>
+        <div id="errorMsg" class="error" style="display: none">
+          File upload failed!
+        </div>
+        <div id="successMsg" class="success" style="display: none">
+          Successfully uploaded file!
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
