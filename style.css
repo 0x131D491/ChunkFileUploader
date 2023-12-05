@@ -143,16 +143,16 @@ section .details span {
 
 .progress-bar {
   width: 100%;
-  margin-top: 8px;
+  margin-top: 4px;
   background-color: #e0e0e0;
-  padding: 2px;
+  padding: 1px;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .progress-bar-fill {
   display: block;
-  height: 10px;
+  height: 5px;
   background-color: #659cef;
   border-radius: 3px;
 
@@ -162,11 +162,13 @@ section .details span {
 .error {
   color: #d8000c;
   font-size: 14px;
+  height: 14px;
 }
 
 .success {
   color: #4f8a10;
   font-size: 14px;
+  height: 14px;
 }
 
 .tooltip {
@@ -191,4 +193,18 @@ section .details span {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.file-list {
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+.fileupload-item:first {
+  margin-top: 0px !important;
+}
+
+.fileupload-item {
+  margin-top: 10px;
 }
